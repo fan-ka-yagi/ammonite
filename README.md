@@ -10,7 +10,7 @@ Use external libraries in REPL session
 @ import $ivy.`com.github.nscala-time::nscala-time:2.18.0`, com.github.nscala_time.time.Imports._
 ```
 
-# Use amm as scala interprinter
+# Use amm as scala interpreter
 ```
 $ docker run -it fankayagi/ammonite /bin/bash
 root@7cbb47a7457b:~# vi hello.sc
