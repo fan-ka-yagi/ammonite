@@ -1,5 +1,5 @@
-# ammonite
-Ammonite REPL for your Scala programming sandbox
+# Ammonite REPL environment as docker container
+This is Ammonite REPL container for your Scala programming
 
 # Use amm as REPL
 ```
