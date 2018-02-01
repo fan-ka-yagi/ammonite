@@ -16,6 +16,12 @@ RUN apt-get update && apt-get install -y sbt
 # Install ammonite. See http://ammonite.io/#Ammonite-REPL
 RUN curl -L -o /usr/bin/amm https://git.io/vdNv2 && chmod +x /usr/bin/amm && mkdir /root/.ammonite
 
+# Add libraries.
 WORKDIR /root
-RUN echo 'import $ivy.`com.lihaoyi::ammonite-ops:1.0.3`, ammonite.ops._' | tee -a /root/.ammonite/predef.sc
-RUN amm -c 'println("initial run for fetching libraries...")'
+RUN echo '// This is ammonite rc file.\n\
+import $ivy.`com.lihaoyi::ammonite-ops:1.0.3`, ammonite.ops._\n\
+import $ivy.`org.typelevel::cats-core:1.0.1`\n\
+' >> /root/.ammonite/predef.sc
+
+# Cache libraries.
+RUN export TERM=vt100 && script -qfc 'echo exit | amm -s' && rm typescript
