@@ -1,4 +1,4 @@
-# Ammonite REPL environment as docker container
+# What is this?
 This is Ammonite REPL container for your Scala programming
 
 # Supporting libraries
