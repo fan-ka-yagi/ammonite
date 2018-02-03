@@ -21,7 +21,8 @@ WORKDIR /root
 RUN echo '// This is ammonite rc file.\n\
 import $ivy.`com.lihaoyi::ammonite-ops:1.0.3`, ammonite.ops._\n\
 import $ivy.`org.typelevel::cats-core:1.0.1`\n\
-' >> /root/.ammonite/predef.sc
+import $ivy.`com.chuusai::shapeless:2.3.3`\n\
+' > /root/.ammonite/predef.sc
 
 # Cache libraries.
 RUN export TERM=vt100 && script -qfc 'echo exit | amm -s' && rm typescript
