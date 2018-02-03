@@ -1,6 +1,9 @@
 # Ammonite REPL environment as docker container
 This is Ammonite REPL container for your Scala programming
 
+# Supporting libraries
+cats, shapeless, fs2, doobie, circe
+
 # Use amm as REPL
 ```
 $ docker run -it fankayagi/ammonite:2.12.4 amm
