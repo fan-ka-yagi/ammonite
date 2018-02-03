@@ -22,6 +22,17 @@ RUN echo '// This is ammonite rc file.\n\
 import $ivy.`com.lihaoyi::ammonite-ops:1.0.3`, ammonite.ops._\n\
 import $ivy.`org.typelevel::cats-core:1.0.1`\n\
 import $ivy.`com.chuusai::shapeless:2.3.3`\n\
+import $ivy.`co.fs2::fs2-core:0.10.0-RC1`\n\
+import $ivy.`co.fs2::fs2-io:0.10.0-RC1`\n\
+import $ivy.`org.tpolecat::doobie-core:0.5.0-RC1`\n\
+import $ivy.`org.tpolecat::doobie-h2:0.5.0-RC1`\n\
+import $ivy.`org.tpolecat::doobie-hikari:0.5.0-RC1`\n\
+import $ivy.`org.tpolecat::doobie-postgres:0.5.0-RC1`\n\
+import $ivy.`org.tpolecat::doobie-specs2:0.5.0-RC1`\n\
+import $ivy.`org.tpolecat::doobie-scalatest:0.5.0-RC1`\n\
+import $ivy.`io.circe::circe-core:0.9.1`\n\
+import $ivy.`io.circe::circe-generic:0.9.1`\n\
+import $ivy.`io.circe::circe-parser:0.9.1`\n\
 ' > /root/.ammonite/predef.sc
 
 # Cache libraries.
