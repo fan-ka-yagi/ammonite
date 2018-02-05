@@ -1,5 +1,18 @@
 FROM ubuntu:16.04
-MAINTAINER Kazuo Yagi <ka_yagi@fancs.com>
+LABEL maintainer "Kazuo Yagi <ka_yagi@fancs.com>"
+
+ARG BUILD_DATE
+ARG VCS_REF
+
+LABEL \
+    org.label-schema.build-date=$BUILD_DATE \
+    org.label-schema.docker.dockerfile="/Dockerfile" \
+    org.label-schema.license="GNU GENERAL PUBLIC LICENSE Version 3" \
+    org.label-schema.name="fan-ka-yagi/ammonite" \
+    org.label-schema.url="https://github.com/fan-ka-yagi/ammonite" \
+    org.label-schema.vcs-ref=$VCS_REF \
+    org.label-schema.vcs-type="Git" \
+    org.label-schema.vcs-url="https://github.com/fan-ka-yagi/ammonite"
 
 # Install JDK, misc packages.
 RUN apt-get update && apt-get install -y \
